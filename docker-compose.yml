@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  notification-service:
+    container_name: notification-service
+    restart: always
+    image: notification-service
+    ports:
+      - "8082:8082"
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    external: true
